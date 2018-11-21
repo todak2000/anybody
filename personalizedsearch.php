@@ -503,7 +503,7 @@ if(!empty($result)) {
 }  
 }
    ?>
-		<div class="bottom" style="height:5%; position:fixed; bottom:0;">
+		<div class="bottom" style="width:97%; position: fixed;">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div style="width:96vw; ">
 					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>

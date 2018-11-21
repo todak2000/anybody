@@ -120,7 +120,7 @@ echo"
                     <div><a href="moresearch.php"><img src="more.svg"></a></div>
                     
                   </div>
-		<div class="bottom">
+			<div class="bottom" style="width:97%; position: fixed;">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
 					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
