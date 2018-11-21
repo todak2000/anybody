@@ -116,7 +116,7 @@ echo"
                     
                   </div> -->
 			<!-- </div> -->
-			<div class="flex-container" style="justify-content: center;margin-left:0;">
+			<div class="flex-container" style="justify-content: center;margin-left:0; min-height:57%;">
                     <div><a href="moresearch.php"><img src="more.svg"></a></div>
                     
                   </div>
