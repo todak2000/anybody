@@ -1,0 +1,234 @@
+html, body{
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	/* overflow-x: hidden;
+	overflow-y: hidden; */
+	font-family: 'Open Sans', sans-serif;
+}
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col-md-7, .col-md-9 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.back{
+    position: relative;
+    top: 0;
+}
+
+.h1{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom:10%;
+}
+.h1a{
+    font-size: 45px;
+    font-weight: bolder;
+    color: #0A5F8E;
+}
+.p{
+    font-size: 16px;
+}
+.pa{
+    font-size: 16px;
+    color:#676767;
+}
+.bot{
+    width:40%;
+    height:50px;
+    margin-top:20%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px!important;
+}
+.bota{
+    width:40%;
+    height:50px;
+    margin-top:2%;
+    color: #FFF;
+    background-color: #0A5F8E;
+    border-radius: 25px!important;
+}
+.contain{
+    width: 100%;
+    height: 100%;
+    color:#000;
+
+}
+.fa-facebook, .fa-google{
+    font-size:20px;
+    color: #CCC;
+}
+/* input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    border:0;
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: #f1f1f1;
+
+} */
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 20px 10px;
+    background: #f0f0f0;
+    color: #ccc;
+    min-width: 50px;
+    border-radius:30px 0px  0px 30px; 
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background-color:#f0f0f0;
+    border: 0;
+    border-radius:0 30px  30px 0; 
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+a{
+    color: #fff;
+}
+a:hover{
+	color:#fff!important;
+	opacity:0.8!important;
+}
+button:hover{
+	color:#fff!important;
+	opacity:0.8!important;
+}
+.span{
+    height:40px;
+    width:40px;
+    border:1px solid #676767;
+    margin: auto;
+    padding-top:10px;
+    border-radius: 50%;
+}
+.left{
+    /* width: 50%; */
+    height: 100%;
+    float: left;
+    color:#000;
+    background-color: #0A5F8E;
+    background-image: url(../logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.lefta{
+    /* width: 50%; */
+    height: 100%;
+    float: right;
+    color:#000;
+    background-color: #0A5F8E;
+    background-image: url(../logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.signin{
+    width:80%;
+    height:70%;
+    margin: 20% auto;
+    text-align: center;
+}
+.signina{
+    width:80%;
+    height:70%;
+    margin: 30% auto;
+    text-align: center;
+}
+::placeholder{
+    color:#ccc;
+}
+.sign{
+    width:50%;
+    height:50%;
+    margin: 30% auto;
+    text-align: center;
+    color: #fff;
+}
+.signa{
+    width:50%;
+    height:50%;
+    margin: 30% auto;
+    text-align: center;
+    color: #fff;
+}
+.right{
+    /* width: 50%; */
+    height: 100%;
+    float: right;
+    color:#000;
+    background-color:#FFF;
+}
+.righta{
+    /* width: 50%; */
+    height: 100%;
+    float: left;
+    color:#000;
+    background-color:#FFF;
+}
+a:hover,
+a:active,
+a:focus,
+input:hover,
+input:active,
+input:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: 0;
+}
+.input-field:focus,.input-field:active {
+    outline:0px !important;
+    -webkit-appearance:none!important;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none!important;
+}
