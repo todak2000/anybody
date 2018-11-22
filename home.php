@@ -67,7 +67,7 @@
 				<?php
 
 				
-				$query2 = "SELECT DISTINCT search_query,image_url FROM searching WHERE user_id='".$id."'";
+				$query2 = "SELECT search_query,image_url FROM searching WHERE user_id='".$id."' GROUP BY search_query ORDER BY id DESC LIMIT 0,5";
 				
 $result2 = mysqli_query($con,$query2) or die(mysqli_error());
 $rows2 = mysqli_num_rows($result2);
