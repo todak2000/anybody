@@ -243,5 +243,9 @@ label:focus,
   @media screen and (max-height: 769px) {
     .signin {
       height: 60%;
+      margin:10% auto;
+    }
+    .sign{
+        margin:20% auto;
     }
   }
