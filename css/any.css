@@ -86,9 +86,8 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     padding:15px;
     color:#676767;
     margin:0 1%;
-    position: fixed;
+    position: relative;
     bottom:0;
-    width:97%;   
     font-family: Open Sans;
     font-size: 14px;
     line-height: 22px;

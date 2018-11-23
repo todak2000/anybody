@@ -31,6 +31,9 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     position: relative;
     top: 0;
 }
+.boddy{
+    overflow-y: hidden;
+}
 
 .h1{
     font-size: 50px;
@@ -232,3 +235,8 @@ label:focus,
     outline:0px !important;
     -webkit-appearance:none!important;
 }
+@media screen and (min-width: 1400px) {
+    .boddy {
+      overflow-y: auto;
+    }
+  }

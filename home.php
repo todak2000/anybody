@@ -67,7 +67,7 @@
 				<?php
 
 				
-				$query2 = "SELECT search_query,image_url FROM searching WHERE user_id='".$id."' GROUP BY search_query ORDER BY id DESC LIMIT 0,5";
+				$query2 = "SELECT DISTINCT search_query,image_url FROM searching WHERE user_id='".$id."'";
 				
 $result2 = mysqli_query($con,$query2) or die(mysqli_error());
 $rows2 = mysqli_num_rows($result2);
@@ -116,11 +116,11 @@ echo"
                     
                   </div> -->
 			<!-- </div> -->
-			<div class="flex-container" style="justify-content: center;margin-left:0; min-height:57%;">
+			<div class="flex-container" style="justify-content: center;margin-left:0;">
                     <div><a href="moresearch.php"><img src="more.svg"></a></div>
                     
                   </div>
-			<div class="bottom" style="width:97%; position: fixed;">
+		<div class="bottom">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
 					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>

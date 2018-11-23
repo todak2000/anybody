@@ -16,7 +16,7 @@
     
 </head>
 
-<body style="overflow-y: hidden;">
+<body  class="boddy">
 <?php
 			require('auth/anybodyapp.php');
 		    // If form submitted, insert values into the database.
