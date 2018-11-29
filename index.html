@@ -20,43 +20,58 @@
 		<div class="top">
 			<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 			<div class="button pull-right hidden-xs hidden-sm">
-				<a href="signin.php"><img src="img/signin1.svg" style="margin-right:-5px;"></a>
-				<a href="signup.php"><img src="img/singup1.svg" style="margin-left:-5px;"></a>
+				<a href="signin"><img src="img/signin1.svg" style="margin-right:-5px;"></a>
+				<a href="signup"><img src="img/singup1.svg" style="margin-left:-5px;"></a>
 			</div>
 			<div class="button hidden-md hidden-lg" align="center" >
-					<a href="signin.php"><img src="img/signin11.svg" style="margin-right:-20px;"></a>
-					<a href="signup.php"><img src="img/singup11.svg" style="margin-left:-20px;"></a>
+					<a href="signin"><img src="img/signin11.svg" style="margin-right:-20px;"></a>
+					<a href="signup"><img src="img/singup11.svg" style="margin-left:-20px;"></a>
 				</div>
 			</div>
 		
 		
 		<div class="middle">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
-				<div align="center" class=" anybody hidden-xs hidden-sm"><a href="index.html"><img src="img/any.svg"></a></div>
-				<div align="center" class=" anybody hidden-md hidden-lg"><a href="index.html"><img src="img/any_small.svg"></a></div>
-				<form method="GET" action="searchresult.php"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" name="searchQuery" type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
-				<div align="center" class=" search hidden-md hidden-lg"><input class="inp" type="text" name="searchQuery" placeholder="Search for anybody"></div>
-			</div>
-		<div class="bottom">
+				<div align="center" class=" anybody hidden-xs hidden-sm"><a href="index"><img src="img/any.svg"></a></div>
+				<div align="center" class=" anybody hidden-md hidden-lg"><a href="index"><img src="img/any_small.svg"></a></div>
+				<form method="GET" action="searchresult"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" required name="searchQuery" type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
+				<!-- <div align="center" class=" search hidden-md hidden-lg"><input class="inp" type="text" name="searchQuery" placeholder="Search for anybody"></div> -->
+				<form method="GET" action="searchresult"><div class="input-container hidden-md hidden-lg" style="padding-left:5%;">
+   
+					<input class="input-field" type="text" placeholder="Search for anybody" required name="searchQuery">
+					 <!-- <i class="fa fa-user icon"></i> -->
+					 <button type="submit" id="completed-task" class="icon">
+						<!-- <i class="fa fa-arrow-circle-right fa-lg"></i> -->
+						<img src="../anybody_live/search_button.svg" style="padding-top:7px;" width="25" height="25">
+				  	</button>
+				  </div></div>		
+				</form>
+		<div class="bottom hidden-md hidden-lg" style="margin-left:0;">
+				<div>
+				
+					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
+				</div>
+		</div>
+
+		<div class="bottom hidden-xs hidden-sm">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
-					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
-					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
-					<ul class=" about hidden-xs hidden-sm">
+					<p class="hidden-xs hidden-sm pbut" >Anybody | iVO Thinking &copy;2018</p>
+					<!-- <ul class=" about hidden-xs hidden-sm pull-right">
 						<li>About</li>
 						<li>Privacy</li>
 						<li>Terms</li>
 						<li>Feedbacks</li>
-					</ul>
-					<ul class=" about hidden-md hidden-lg">
+					</ul> -->
+					<!-- <ul class=" about hidden-md hidden-lg" >
 							<ul class=" about ">
 							<li>About</li>
 							<li>Privacy</li>
 							<li>Terms</li>
 							<li>Feedbacks</li>
-						</ul>
+						</ul> -->
 				</div>
-			</div>
+		</div>
 	</div>
 </body>
 

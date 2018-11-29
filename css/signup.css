@@ -31,6 +31,7 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     position: relative;
     top: 0;
 }
+
 .boddy{
     overflow-y: hidden;
 }
@@ -68,6 +69,15 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     background-color: #0A5F8E;
     border-radius: 25px!important;
 }
+.botaa{
+
+    margin-top:2%;
+    padding:5px;
+    color: #0A5F8E;
+    border: 1px solid #0A5F8E;
+    background-color:transparent;
+    border-radius: 25px!important;
+}
 .contain{
     width: 100%;
     height: 100%;
@@ -98,7 +108,9 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     width: 100%;
     margin-bottom: 15px;
 }
-
+.hidd{
+    display:none;
+}
 .icon {
     padding: 20px 10px;
     background: #f0f0f0;
@@ -197,6 +209,28 @@ button:hover{
     color:#000;
     background-color:#FFF;
 }
+.form_login{
+    width:360px;
+}
+.forma, .formaa, .form1{
+    margin-top: 0;
+    color: #ccc;
+    background-color: rgba(0,0,0, 0.5);
+    /* width: 400px;
+    position: fixed;
+    top: 30%;
+    left: 40%; */
+    width: 40%;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    border-radius: 30px;
+    padding: 15px;
+}
+.img1{
+    width:300px;
+}
+
 .righta{
     /* width: 50%; */
     height: 100%;
@@ -248,4 +282,75 @@ label:focus,
     .sign{
         margin:20% auto;
     }
+    .boddy {
+        overflow-y: auto;
+      }
   }
+
+  /* uygjmkgky,i */
+  @media only screen and (max-width: 769px) {
+    .left, .lefta{
+        display:none;
+    }
+    .hidd {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 5%;
+    }
+    .form_login {
+     width: 360px;
+     }
+     .forma, .formaa, .form1{
+        margin-top: 0;
+        color: #ccc;
+        background-color: rgba(0,0,0, 0.5);
+        width: 40%;
+        position: fixed;
+        top: 20%;
+        left: 30%;
+        border-radius: 30px;
+        padding: 15px;
+    }
+   .img, .img1{
+       width:100px;
+   }
+   .img{
+    font-size:100px;
+    color:red;
+}
+ }
+  @media only screen and (max-width: 767px) {
+   .left, .lefta{
+       display:none;
+   }
+   .hidd{
+    display:block;
+}
+.h1a {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #0A5F8E;
+}
+   .form_login {
+    width: auto;
+    }
+    .forma, .formaa, .form1{
+        margin-top: 0;
+        color: #ccc;
+        background-color: rgba(0,0,0, 0.5);
+        width: 60%;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        border-radius: 30px;
+        padding: 15px;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .h1a {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #0A5F8E;
+    }
+ }

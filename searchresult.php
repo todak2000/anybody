@@ -17,21 +17,44 @@
 
 <body>
 	<div class="contain">
-		<div class="top" style="border-bottom: 1px solid #ccc; height:20%;">
+		<div class="top hidden-xs hidden-sm" style="border-bottom: 1px solid #ccc; height:20%;">
 			<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
-			<div class="button pull-left hidden-xs hidden-sm">
-                <a href="#"><img src="img/any_small.svg" style="margin-right:-5px;"></a><br>
+			<div class="button pull-left small ">
+                <a href="index"><img src="img/any_small.svg" style="margin-right:-5px;"></a><br>
                 <div style="padding-left:100px; margin-top:20px;">
-                <form method="GET" action="searchresult.php"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" name="searchQuery" type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
+                <form method="GET" action="searchresult"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" name="searchQuery" type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
                 </div>
             </div>
             <div class="button pull-right hidden-xs hidden-sm">
-				<a href="signin.php"><img src="img/signin1.svg" style="margin-right:-5px;"></a>
-				<a href="signup.php"><img src="img/singup1.svg" style="margin-left:-5px;"></a>
+				<a href="signin"><img src="img/signin1.svg" style="margin-right:-5px;"></a>
+				<a href="signup"><img src="img/singup1.svg" style="margin-left:-5px;"></a>
 			</div>
 			                
 
+        </div>
+        <!-- mobile responsiveness starts here -->
+        <div class="top hidden-md hidden-lg" style="border-bottom: 1px solid #ccc; height:auto;">
+            <div class="button hidden-md hidden-lg" align="center" >
+					<a href="signin"><img src="img/signin11.svg" style="margin-right:-20px;"></a>
+					<a href="signup"><img src="img/singup11.svg" style="margin-left:-20px;"></a>
+				</div>
+                            
+                             
+           
+				<div align="center" class=" anybody hidden-md hidden-lg"><a href="index"><img src="img/any_small.svg"></a></div>
+				
+				<form method="GET" action="searchresult"><div class="input-container hidden-md hidden-lg" style="padding-left:5%;">
+   
+					<input class="input-field" type="text" placeholder="Search for anybody" required name="searchQuery">
+
+					 <button type="submit" id="completed-task" class="icon">
+						<img src="../anybody_live/search_button.svg" style="padding-top:5px;" width="25" height="25">
+				  </button>
+				  </div>		
+				</form>
+
 		</div>
+        <!-- mobile ends here -->
 		<!-- php starts here -->
 		<?php
 
@@ -44,7 +67,7 @@ $query=str_replace(" ","+", $_GET['searchQuery']);
 
 //The API URL for getting the information 
 //$url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyB5WOpV4_-J6QK2XbldcQ-BVgJl6FotTTo&cx=009130427976801447388:idrpxx1qx8c&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
-// $url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyD777ZEvs4UqMZ7kxAv-w98TK1E4hdGoII&cx=018412839258995437894:fgnrg7qhlqy&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
+ //$url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyD777ZEvs4UqMZ7kxAv-w98TK1E4hdGoII&cx=018412839258995437894:fgnrg7qhlqy&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
 $url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyATF24vZ97D7lbdQ1zPuxfJcGvJDQhLh0A&cx=009130427976801447388:athkuwtwhli&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
 
 //using CURL to encode the url 
@@ -182,78 +205,126 @@ if(!empty($result)) {
     
          $divisorCounter = count($titleArray);
          if ($divisorCounter<=3){
-             //if the return array is less than or equal to 3
-            echo"<div class='middle' style='height:75%;'>
-            <h3 style='margin-left:100px;'>$divisorCounter Search Results:</h3>
-            <div class='flex-container'>
-                    <div>
-            ";
-             foreach( $titleArray as $title1 => $source ) {
-                echo "
-                
-                        <div class='innera col-md-6'><a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
-                        </div>
-                        <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
-                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
-                            echo ucwords($_GET['searchQuery']);
-                            echo"</h2></a>
-                            <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
-                            if ($divisorCounter!=0) {
-                                echo($percent= round((($sum*10)/$divisorCounter), 2) .'% Occurence');
-                            }
-                            else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
-                            echo"</h4>
-                            <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
-                            <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
-                            echo ucwords($source); echo"</h4>
-                            
-                        </div>
-                    
-                "; 
-            }
-            echo"</div>
-                    
+              //if the return array is less than or equal to 3
+             ?>
+             <div class='middle' style='height:75%; margin-bottom: 50px;'>
+                <h3 style='margin-left:100px;'><?php echo $divisorCounter; ?> Search Results:</h3>
+                <div class='flex-container'>
+             <?php
+            //if the return array is less than or equal to 3
+           
+            foreach( $titleArray as $title1 => $source ) {
+               echo "
+               <div>
+                       <div class='innera col-md-6'>
+                            <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
+                       </div>
+                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
+                           echo ucwords($_GET['searchQuery']);
+                           echo"</h2></a>
+                           <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
+                           if ($divisorCounter!=0) {
+                               echo($percent= round((($sum*10)/$divisorCounter), 2) .'% Occurence');
+                           }
+                           else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
+                           echo"</h4>
+                           <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
+                           <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
+                           echo ucwords($source); echo"</h4>
+                           
+                       </div>
                 </div>
+                   
+               "; 
+           }
+          ?>
+                </div>
+               
+            </div>
+          <?php
+        }
+        //  if ($divisorCounter<=3){
+        //      //if the return array is less than or equal to 3
+        //     echo"<div class='middle' style='height:75%;'>
+        //     <h3 style='margin-left:100px;'>$divisorCounter Search Results:</h3>
+        //     <div class='flex-container'>
+        //             <div>
+        //     ";
+        //      foreach( $titleArray as $title1 => $source ) {
+        //         echo "
                 
-            </div>";
-         }else{
+        //                 <div class='innera col-md-6'><a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
+        //                 </div>
+        //                 <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
+        //                     <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
+        //                     echo ucwords($_GET['searchQuery']);
+        //                     echo"</h2></a>
+        //                     <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
+        //                     if ($divisorCounter!=0) {
+        //                         echo($percent= round((($sum*10)/$divisorCounter), 2) .'% Occurence');
+        //                     }
+        //                     else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
+        //                     echo"</h4>
+        //                     <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
+        //                     <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
+        //                     echo ucwords($source); echo"</h4>
+                            
+        //                 </div>
+                    
+        //         "; 
+        //     }
+        //     echo"</div>
+                    
+        //         </div>
+                
+        //     </div>";
+        //  }
+         
+         
+         
+         
+         else{
             //if the search result is greater than 3
             $divisorCounter1 = count($titleArray1);
-        echo"<div class='middle' style='height:75%;'>
-        <h3 style='margin-left:100px;'>$divisorCounter1 Search Results:</h3>
-        <div class='flex-container'>
-                <div>
-        ";
-         foreach( $titleArray1 as $title2 => $source ) {
-            echo "
-            
-                    <div class='innera col-md-6'><a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
-                    </div>
-                    <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
-                        <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
-                        echo ucwords($_GET['searchQuery']);
-                        echo"</h2></a>
-                        <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
-                        if ($divisorCounter1!=0) {
-                            echo($percent=round((($sum*10)/$divisorCounter1)) .'% Occurence');
-                        }
-                        else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
-                        echo"</h4>
-                        <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
-                        <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
-                        echo ucwords($source); echo"</h4>
-                        
-                    </div>
-                
-                    "; 
 
-        }
-       
-        echo"</div>
-                
-            </div>
+        ?>
+             <div class='middle' style='height:75%; margin-bottom: 50px;'>
+             <h3 style='margin-left:100px;'><?php echo $divisorCounter; ?> Search Results:</h3>
+                <div class='flex-container'>
+             <?php
             
-        </div>";
+           
+            foreach( $titleArray1 as $title2 => $source ) {
+               echo "
+               <div>
+                       <div class='innera col-md-6'>
+                            <a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
+                       </div>
+                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
+                           echo ucwords($_GET['searchQuery']);
+                           echo"</h2></a>
+                           <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
+                           if ($divisorCounter1!=0) {
+                               echo($percent= round((($sum*10)/$divisorCounter1)) .'% Occurence');
+                           }
+                           else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
+                           echo"</h4>
+                           <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
+                           <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
+                           echo ucwords($source); echo"</h4>
+                           
+                       </div>
+                </div>
+                   
+               "; 
+           }
+          ?>
+                </div>
+               
+            </div>
+          <?php
          }
          
 
@@ -282,6 +353,8 @@ if(!empty($result)) {
                     }elseif  (strpos($title, '•')) {
                         $newTit= explode(' • ', $title);
                         array_push($titleArray, $newTit[1]) ;
+                    }elseif($newTit[1]==NULL){
+                        array_push($titleArray, "No source") ;
                     }
               
                 array_push($urlTitle, $imageUrl);
@@ -330,77 +403,84 @@ if(!empty($result)) {
         //  var_dump($divisorCounter);
          if ($divisorCounter<=3){
              //if the return array is less than or equal to 3
-            echo"<div class='middle' style='height:75%;'>
-            <h3 style='margin-left:100px; margin-right:100px;'>$divisorCounter Search Results:</h3>
-            <div class='flex-container'>
-                    <div>
-            ";
-             foreach( $titleArray as $title1 => $source ) {
-                echo "
-                
-                        <div class='innera col-md-6'><a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
-                        </div>
-                        <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
-                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
-                            echo ucwords($_GET['searchQuery']);
-                            echo"</h2></a>
-                            <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
-                            if ($divisorCounter!=0) {
-                                echo($percent= round((($sum*10)/$divisorCounter), 2) .'% Occurence');
-                            }
-                            else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
-                            echo"</h4>
-                            <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
-                            <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
-                            echo ucwords($source); echo"</h4>
-                            
-                        </div>
-                    
-                "; 
-            }
-            echo"</div>
-                    
+             ?>
+             <div class='middle' style='height:75%; margin-bottom: 50px;'>
+                <h3 style='margin-left:100px;'><?php echo $divisorCounter; ?> Search Results:</h3>
+                <div class='flex-container'>
+             <?php
+            //if the return array is less than or equal to 3
+           
+            foreach( $titleArray as $title1 => $source ) {
+               echo "
+               <div>
+                       <div class='innera col-md-6'>
+                            <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
+                       </div>
+                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
+                           echo ucwords($_GET['searchQuery']);
+                           echo"</h2></a>
+                           <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
+                           if ($divisorCounter!=0) {
+                               echo($percent= round((($sum*10)/$divisorCounter), 2) .'% Occurence');
+                           }
+                           else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
+                           echo"</h4>
+                           <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
+                           <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
+                           echo ucwords($source); echo"</h4>
+                           
+                       </div>
                 </div>
-                
-            </div>";
-         }else{
+                   
+               "; 
+               
+           }
+          ?>
+                </div>
+               
+            </div>
+          <?php
+        }else{
             //if the search result is greater than 3
             $divisorCounter1 = count($titleArray1);
-        echo"<div class='middle' style='height:75%;'>
-        <h3 style='margin-left:100px;'>$divisorCounter1 Search Results:</h3>
-        <div class='flex-container'>
-                <div>
-        ";
-         foreach( $titleArray1 as $title2 => $source ) {
-            echo "
-            
-                    <div class='innera col-md-6'><a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
-                    </div>
-                    <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
-                        <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
-                        echo ucwords($_GET['searchQuery']);
-                        echo"</h2></a>
-                        <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
-                        if ($divisorCounter1!=0) {
-                            echo($percent=round((($sum*10)/$divisorCounter1)) .'% Occurence');
-                        }
-                        else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
-                        echo"</h4>
-                        <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
-                        <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
-                        echo ucwords($source); echo"</h4>
-                        
-                    </div>
-                
-                    "; 
-
-        }
-       
-        echo"</div>
-                
-            </div>
-            
-        </div>";
+            ?>
+            <div class='middle' style='height:75%; margin-bottom: 50px;'>
+            <h3 style='margin-left:100px;'><?php echo $divisorCounter; ?> Search Results:</h3>
+               <div class='flex-container'>
+            <?php
+           
+          
+           foreach( $titleArray1 as $title2 => $source ) {
+              echo "
+              <div>
+                      <div class='innera col-md-6'>
+                           <a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
+                      </div>
+                      <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                          <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
+                          echo ucwords($_GET['searchQuery']);
+                          echo"</h2></a>
+                          <h4 style='font-size:0.8em; font-weight: bold; color:#0288D1;line-height: 20px;'>";
+                          if ($divisorCounter1!=0) {
+                              echo($percent= round((($sum*10)/$divisorCounter1)) .'% Occurence');
+                          }
+                          else{echo 'Not Found! Try again later. Thank you for using ANYBODY';}
+                          echo"</h4>
+                          <h6 style='font-size:0.6em; font-style: italic; color:#009688;line-height: 18px;'>Percentage validity Search</h6>
+                          <h4 style='font-size:0.8em; font-weight: bold;line-height: 18px;color:#4a4a4a;'>";
+                          echo ucwords($source); echo"</h4>
+                          
+                      </div>
+               </div>
+                  
+              "; 
+          }
+         ?>
+               </div>
+              
+           </div>
+         <?php
          }
  }
     }
@@ -410,27 +490,32 @@ if(!empty($result)) {
     exit;
 }
    ?>
-		<div class="bottom" style="height:5%;">
+		<div class="bottom hidden-md hidden-lg" style="margin-left:0;">
+				<div>
+				
+					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
+				</div>
+		</div>
+
+		<div class="bottom hidden-xs hidden-sm">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
-					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
-					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
-					<ul class=" about hidden-xs hidden-sm">
+					<p class="hidden-xs hidden-sm pbut" >Anybody | iVO Thinking &copy;2018</p>
+					<!-- <ul class=" about hidden-xs hidden-sm pull-right">
 						<li>About</li>
 						<li>Privacy</li>
 						<li>Terms</li>
 						<li>Feedbacks</li>
-					</ul>
-					<ul class=" about hidden-md hidden-lg">
+					</ul> -->
+					<!-- <ul class=" about hidden-md hidden-lg" >
 							<ul class=" about ">
 							<li>About</li>
 							<li>Privacy</li>
 							<li>Terms</li>
 							<li>Feedbacks</li>
-						</ul>
+						</ul> -->
 				</div>
-			</div>
-	</div>
+		</div>
 </body>
 
 </html>

@@ -39,30 +39,43 @@
 		<div class="top">
 			<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 			<div class="button pull-right hidden-xs hidden-sm">
-				<!-- <a href="#"><img src="img/signin1.svg" style="margin-right:-5px;"></a>
-				<a href="#"><img src="img/singup1.svg" style="margin-left:-5px;"></a> -->
-				<a href="signout.php"><div style="width: 100px; text-align: center; justify-content: center;"><i class="fa fa-power-off" style="font-size:30px; color:#008ef5"></i><br> Sign Out</div></a>
+				<a href="signout"><div style="width: 100px; text-align: center; justify-content: center;"><i class="fa fa-power-off" style="font-size:30px; color:#008ef5"></i><br> Sign Out</div></a>
 			</div>
 			<div class="button pull-left hidden-xs hidden-sm">
 					<h2 style="">
                         <span style="color:f#232323; font-size:14px;">Welcome,</span>
                     <span style="color:#008ef5;font-size:24px; font-weight:bolder;"><?php echo $name;?>!</span></h2>
-				</div>
-			<div class="button hidden-md hidden-lg" align="center" >
+			</div>
+			<!-- <div class="button hidden-md hidden-lg" align="center" >
 					<a href="#"><img src="img/signin11.svg" style="margin-right:-20px;"></a>
 					<a href="#"><img src="img/singup11.svg" style="margin-left:-20px;"></a>
-				</div>
+			</div> -->
+			<div class="button pull-right hidden-lg hidden-md">
+				<a href="signout"><div style="width: 100px; text-align: center; justify-content: center; ">Sign Out  <i class="fa fa-power-off" style="font-size:20px; color:#008ef5"></i></div></a>
 			</div>
+			<div class="button pull-left hidden-lg hidden-md" style="padding-left:0;">
+					<h2 style="">
+                        <span style="color:f#232323; font-size:10px;">Welcome,</span>
+                    <span style="color:#008ef5;font-size:14px; font-weight:bolder;"><?php echo $name;?>!</span></h2>
+			</div>
+		</div>
 		
 		
-		<div class="middle">
+		<div class="middle" style="height:auto;">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div align="center" class=" anybody hidden-xs hidden-sm" style="padding-top: 5%"><img src="img/any.svg"></div>
 				<div align="center" class=" anybody hidden-md hidden-lg"><img src="img/any_small.svg"></div>
 				<!-- <div align="center" class=" search hidden-xs hidden-sm"><input class="inp" type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button"></button></a></div> -->
-				<form method="GET" action="personalizedsearch.php"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" name="searchQuery"required type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
-                <div align="center" class=" search hidden-md hidden-lg"><input class="inp"  type="text" placeholder="Search for anybody" required></div>
-                
+				<form method="GET" action="personalizedsearch"><div align="center" class=" search hidden-xs hidden-sm"><input class="inp" name="searchQuery"required type="text" placeholder="Search for anybody"><a href="#"><button class=" search_button" type="submit" name="submit"></button></a></div></form>
+                <form method="GET" action="personalizedsearch"><div class="input-container hidden-md hidden-lg" style="padding-left:5%;">
+					<input class="input-field" type="text" placeholder="Search for anybody" required name="searchQuery">
+					 <!-- <i class="fa fa-user icon"></i> -->
+					 <button type="submit" id="completed-task" class="icon">
+						<!-- <i class="fa fa-arrow-circle-right fa-lg"></i> -->
+						<img src="../anybody_live/search_button.svg" style="padding-top:7px;" width="25" height="25">
+				  	</button>
+				  </div></div>		
+				</form>
 				
 				<?php
 
@@ -74,7 +87,7 @@ $rows2 = mysqli_num_rows($result2);
 if($rows2>0){
 
     echo"<div class='middle' style='height:70%;'>
-            <div class='flex-container' style='justify-content: center; margin-left:0;'>
+            <div class='flex-container' style='justify-content: center;  margin-top:0;'>
                    
             ";
     while ($row2 = mysqli_fetch_assoc($result2))
@@ -86,7 +99,7 @@ if($rows2>0){
         
 
          echo "
-		 <div>     
+		 <div style='width:auto;'>     
          <div class='inner'><img src='".$image222."' style='border-radius: 50%;padding:10px;' width='100' height='100'>
          </div>
          	<p>";
@@ -104,40 +117,16 @@ echo"
 ";
     }
 	?>
-                <!-- <div class="flex-container" style="justify-content: center; margin-left:0;">
-                    <div><div class="inner"><a href="#"><img src="img/dummy1.png" style="border-radius: 50%;padding:10px;" width="100" height="100"></a></div><a href="#"><p>Ndukwe Ebenezer</p></a></div>
-                    <div><div class="inner"><a href="#"><img src="img/dummy2.png" style="border-radius: 50%;padding:10px;" width="100" height="100"></a></div><a href="#"><p>Chioma Chinedu</p></a></div>
-                    <div><div class="inner"><a href="#"><img src="img/dummy1.png" style="border-radius: 50%;padding:10px;" width="100" height="100"></a></div><a href="#"><p>Lai Mohammed</p></a></div>
-                    <div><div class="inner"><a href="#"><img src="img/dummy1.png" style="border-radius: 50%;padding:10px;" width="100" height="100"></a></div><a href="#"><p>Femi Fani-Kayode</p></a></div>
-                    <div><div class="inner"><a href="#"><img src="img/dummy2.png" style="border-radius: 50%;padding:10px;" width="100" height="100"></a></div><a href="#"><p>Nafisat Abdul-hamid</p></a></div> -->
-                  <!-- </div>
-                  <div class="flex-container" style="justify-content: center;margin-left:0;">
-                    <div><a href="#"><img src="more.svg"></a></div>
+			<!-- <div class="flex-container" style="justify-content: center;margin-left:0;"> -->
+                    <div class="search_image"><a href="moresearch"><img src="more.svg"></a></div>
                     
-                  </div> -->
-			<!-- </div> -->
-			<div class="flex-container" style="justify-content: center;margin-left:0;">
-                    <div><a href="moresearch.php"><img src="more.svg"></a></div>
-                    
-                  </div>
-		<div class="bottom">
+                  <!-- </div> -->
+		<div class="bottoma" align="center">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
-					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
+					<p class="text-center hidden-xs hidden-sm" align="center">Anybody | iVO Thinking &copy;2018</p>
 					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
-					<ul class=" about hidden-xs hidden-sm">
-						<li>About</li>
-						<li>Privacy</li>
-						<li>Terms</li>
-						<li>Feedbacks</li>
-					</ul>
-					<ul class=" about hidden-md hidden-lg">
-							<ul class=" about ">
-							<li>About</li>
-							<li>Privacy</li>
-							<li>Terms</li>
-							<li>Feedbacks</li>
-						</ul>
+				
 				</div>
 			</div>
 	</div>

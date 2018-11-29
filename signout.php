@@ -3,6 +3,6 @@
 session_start();
 if(session_destroy()) // Destroying All Sessions
 {
-header("Location: signin.php"); // Redirecting To Home Page
+header("Location: signin"); // Redirecting To Home Page
 }
 ?>

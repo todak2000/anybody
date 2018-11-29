@@ -39,10 +39,10 @@
 		        if($rows==1){
                     $_SESSION['email'] = $email;
                    // var_dump($rows);
-					 //echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Login SUccessfully.</h3><br/>Click here to <a style='color:#979b1b;' href='index.php'>Home</a></div>";
-					 header("Location: home.php");// Redirect user to index.php
+					 //echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Login SUccessfully.</h3><br/>Click here to <a style='color:#979b1b;' href='index'>Home</a></div>";
+					 header("Location: home");// Redirect user to index.php
 		            }else{
-						echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Username/password is incorrect.</h3><br/>Click here to <a style='color:#979b1b;' href='signin.php'>Login</a></div>";
+						echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Username/password is incorrect.</h3><br/>Click here to <a style='color:#979b1b;' href='signin'>Login</a></div>";
 						}
 		    }else{
 		?>
@@ -50,10 +50,10 @@
 		<div class="lefta col-md-6 col-sm-12 col-xs-12" style="margin:auto;">
             <!-- <img src="img/logo.svg" width="900px" height="900px" class="back"> -->
             <div class="signa">
-                <a href="index.html"><img src="img/anywhite.svg"></a>
+                <a href="index"><img src="img/anywhite.svg"></a>
                 <p class="h1">Hello, Friend</p>
                <div style="width:270px; margin: auto"align="center"> <p class="p" >Enter your personal details and start your journey with us</p></div>
-               <a href="signup.php"> <button class="btn bot">SIGN UP</button></a>
+               <a href="signup"> <button class="btn bot">SIGN UP</button></a>
             </div>
 
         </div>
@@ -63,7 +63,7 @@
                     <div style="width: 100px; height:70px; margin:auto"><div class="span" style="float: left;"><i class="fa fa-facebook"></i></div><div class="span" style="float: right;"><i class="fa fa-google"></i></div></div>
                     <div style="width:270px; margin: auto; margin-bottom:20px;"align="center"> <p class="pa" >Or use your email for registration</p></div>
 
-                    <form style=" width: 360px; margin:auto;" method="post" action="">
+                    <form class="form_login" style=" margin:auto;" method="post" action="">
                            
                                 
                                   <div class="input-container">
@@ -78,10 +78,12 @@
                                  <a href="#"> <p class="p" style=" text-decoration: underline; color:#676767;">Forgot your password?</p></a>
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
                     </form>
+                    <p class="hidd pull-left"><a href="signup" class="btn botaa">Sign up</a> if you are yet to register!</p>
             </div>                
         </div>
     </div>
     <?php } ?>
+   
 </body>
 
 </html>
