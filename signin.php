@@ -78,7 +78,7 @@
                                  <a href="#"> <p class="p" style=" text-decoration: underline; color:#676767;">Forgot your password?</p></a>
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
                     </form>
-                    <p class="hidd pull-left"><a href="signup" class="btn botaa">Sign up</a> if you are yet to register!</p>
+                    <p class="hidd pull-left">if you are yet to register! <a href="signup" class="btn botaa">Sign up</a> </p>
             </div>                
         </div>
     </div>
