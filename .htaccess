@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteRule ^index? index.html 
+RewriteRule ^home? home.php 
+RewriteRule ^signout? signout.php 
+RewriteRule ^signin? signin.php 
+RewriteRule ^signup? signup.php 
+RewriteRule ^searchresult? searchresult.php
+RewriteRule ^moresearch? moresearch.php 
+RewriteRule ^personalizedsearch? personalizedsearch.php 
