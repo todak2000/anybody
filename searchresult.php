@@ -48,7 +48,7 @@
 					<input class="input-field" type="text" placeholder="Search for anybody" required name="searchQuery">
 
 					 <button type="submit" id="completed-task" class="icon">
-						<img src="search_button.svg" style="padding-top:5px;" width="25" height="25">
+						<!-- <img src="search_button.svg" style="padding-top:5px;" width="25" height="25"> -->
 				  </button>
 				  </div>		
 				</form>

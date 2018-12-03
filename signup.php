@@ -54,7 +54,7 @@
                                         <input class="input-field" type="text" placeholder="Phone Number" name="phone">
                                       </div> -->
                                       <button class="btn bota" type="submit">SIGN UP</button><br><br>
-                                    <p class="hidd pull-left"> if you are registered already <a href="signin" class="btn botaa pull-right">Sign in</a></p>
+                                    <p class="hidd pull-left"> Registered already ?</p><a href="signin" class="btn botaa pull-right hidd" style=" left:70%;">Sign in</a>
                     </form>
                     <?php
 			require('auth/anybodyapp.php');

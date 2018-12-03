@@ -72,7 +72,7 @@
 					 <!-- <i class="fa fa-user icon"></i> -->
 					 <button type="submit" id="completed-task" class="icon">
 						<!-- <i class="fa fa-arrow-circle-right fa-lg"></i> -->
-						<img src="search_button.svg" style="padding-top:7px;" width="25" height="25">
+						<!-- <img src="search_button.svg" style="padding-top:7px;" width="25" height="25"> -->
 				  	</button>
 				  </div></div>		
 				</form>
