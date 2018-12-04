@@ -28,7 +28,7 @@
             </div>
 
         </div>
-        <div class="right col-md-6 col-sm-12 col-xs-12">
+        <div class="flex-container col-md-6 col-sm-12 col-xs-12">
             <div class="signin">
             <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
                     <p class="h1a">Hi!</p><p class="h1a" style="margin-bottom:20px;">Create Account</p>
