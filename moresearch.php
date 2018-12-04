@@ -103,7 +103,7 @@ if($rows2>0){
          <div>  
          <div class='innera col-md-6'><img src='".$image222."' style='border-radius: 50%;' width='120' height='120'>
          </div>
-         <div class='col-md-6 texxt' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
+         <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
              <h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
              echo ucwords($name222);
              echo"</h2>
