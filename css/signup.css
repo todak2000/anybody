@@ -262,10 +262,23 @@ button:hover,
 button:active,
 button:focus {
   outline: 0;
+  background-color:transparent;
+    border: 0px solid;
+}
+/* input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: red !important;
+} */
+*:focus {
+    outline: 0;
 }
 .input-field:focus,.input-field:active {
     outline:0px !important;
     -webkit-appearance:none!important;
+    border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 textarea:hover, 
 input:hover, 
