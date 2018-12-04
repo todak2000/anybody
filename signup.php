@@ -121,7 +121,21 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/submit_login.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.input-field').focus(function() {
+            $('#leftie').hide();
+            $('#rightie').hide();
     
+            });
+
+            $(".input-field").focusout(function() {
+                $('#leftie').show();
+                $('#rightie').show();
+            });
+        
+        })
+    </script>
 </body>
 
 </html>

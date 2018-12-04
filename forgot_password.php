@@ -85,9 +85,21 @@
     $('.closea1').click(function(){
       $('.form1').hide();
     });
+
+    $('.input-field').focus(function() {
+        $('#leftie').hide();
+        $('#rightie').hide();
+    
+        });
+
+    $(".input-field").focusout(function() {
+        $('#leftie').show();
+        $('#rightie').show();
+    });
    
 })
    </script>
+
 </body>
 
 </html>
