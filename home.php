@@ -121,7 +121,7 @@ echo"
                     <div class="search_image"><a href="moresearch"><img src="more.svg"></a></div>
                     
                   <!-- </div> -->
-		<div class="bottoma" align="center">
+		<div class="bottom" align="center">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
 					<p class="text-center hidden-xs hidden-sm" align="center">Anybody | iVO Thinking &copy;2018</p>

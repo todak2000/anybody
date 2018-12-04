@@ -8,3 +8,4 @@ RewriteRule ^signup? signup.php
 RewriteRule ^searchresult? searchresult.php
 RewriteRule ^moresearch? moresearch.php 
 RewriteRule ^personalizedsearch? personalizedsearch.php 
+RewriteRule ^forgot_password? forgot_password.php 
