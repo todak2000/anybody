@@ -219,7 +219,7 @@ if(!empty($result)) {
                        <div class='innera col-md-6'>
                             <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
                        </div>
-                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                       <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                            echo ucwords($_GET['searchQuery']);
                            echo"</h2></a>
@@ -301,7 +301,7 @@ if(!empty($result)) {
                        <div class='innera col-md-6'>
                             <a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
                        </div>
-                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                       <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                            echo ucwords($_GET['searchQuery']);
                            echo"</h2></a>
@@ -416,7 +416,7 @@ if(!empty($result)) {
                        <div class='innera col-md-6'>
                             <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
                        </div>
-                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                       <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                            echo ucwords($_GET['searchQuery']);
                            echo"</h2></a>
@@ -457,7 +457,7 @@ if(!empty($result)) {
                       <div class='innera col-md-6'>
                            <a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
                       </div>
-                      <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                      <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                           echo ucwords($_GET['searchQuery']);
                           echo"</h2></a>

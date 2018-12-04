@@ -109,7 +109,7 @@ if($rows2>0){
          <div>  
          <div class='innera col-md-6'><img src='".$image222."' style='border-radius: 50%;' width='120' height='120'>
          </div>
-         <div class='col-md-6' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
+         <div class='col-md-6 texxt' style='font-family: Open Sans; width:250px; text-align: left; padding-left:15px;'>
              <h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
              echo ucwords($name222);
              echo"</h2>
@@ -140,8 +140,8 @@ if($rows2>0){
 
 
 //The API URL for getting the information 
-$url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyB5WOpV4_-J6QK2XbldcQ-BVgJl6FotTTo&cx=009130427976801447388:idrpxx1qx8c&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
-// $url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyD777ZEvs4UqMZ7kxAv-w98TK1E4hdGoII&cx=018412839258995437894:fgnrg7qhlqy&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
+//$url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyB5WOpV4_-J6QK2XbldcQ-BVgJl6FotTTo&cx=009130427976801447388:idrpxx1qx8c&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
+ $url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyD777ZEvs4UqMZ7kxAv-w98TK1E4hdGoII&cx=018412839258995437894:fgnrg7qhlqy&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
 // $url= "https://www.googleapis.com/customsearch/v1?key=AIzaSyATF24vZ97D7lbdQ1zPuxfJcGvJDQhLh0A&cx=009130427976801447388:athkuwtwhli&q=".$query."&fields=items(title,snippet,pagemap/cse_image)" ;
 
 //using CURL to encode the url 
@@ -295,7 +295,7 @@ if(!empty($result)) {
                        <div class='innera col-md-6'>
                             <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
                        </div>
-                       <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                       <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                            <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                            echo ucwords($_GET['searchQuery']);
                            echo"</h2></a>
@@ -335,7 +335,7 @@ if(!empty($result)) {
                       <div class='innera col-md-6'>
                            <a href='#'><img src='$urlTitle1[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
                       </div>
-                      <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                      <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                           echo ucwords($_GET['searchQuery']);
                           echo"</h2></a>
@@ -448,7 +448,7 @@ if(!empty($result)) {
                       <div class='innera col-md-6'>
                            <a href='#'><img src='$urlTitle[$title1]' style='border-radius: 50%;' width='120' height='120'></a>
                       </div>
-                      <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                      <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                           echo ucwords($_GET['searchQuery']);
                           echo"</h2></a>
@@ -492,7 +492,7 @@ if(!empty($result)) {
                       <div class='innera col-md-6'>
                            <a href='#'><img src='$urlTitle[$title2]' style='border-radius: 50%;' width='120' height='120'></a>
                       </div>
-                      <div class='col-md-6' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
+                      <div class='col-md-6 texxt' style='font-family: Open Sans; text-align: left; padding-left:15px;'>
                           <a href='#'><h2 style='font-size:1.1em; font-weight: bolder;line-height: 25px;'>";
                           echo ucwords($_GET['searchQuery']);
                           echo"</h2></a>
