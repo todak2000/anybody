@@ -54,8 +54,8 @@
                                  
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
                     </form>
-                    <a href="forgot_password.php" class="hidd pull-left" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
-                    <a href="signup" class=" pull-right hidd" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
+                    <a href="forgot_password.php" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
+                    <a href="signup" id="rightie" class=" pull-right hidd" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
             </div>                
         </div>
     </div>
@@ -95,4 +95,20 @@ if (isset($_REQUEST['login'])){
 <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/submit_login.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('.input-field').focus(function() {
+            $('#leftie').hide();
+            $('#rightie').hide();
+    
+            });
+
+            $(".input-field").focusout(function() {
+                $('#leftie').show();
+                $('#rightie').show();
+            });
+        
+        })
+    </script>
 </html>
