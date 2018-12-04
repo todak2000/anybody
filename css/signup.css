@@ -298,9 +298,14 @@ label:focus,
     .left, .lefta{
         display:none;
     }
+    .signina{
+      
+        margin: 20% auto;
+       
+    }
     .hidd {
         display: block;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         margin-bottom: 5%;
     }
@@ -355,8 +360,8 @@ label:focus,
 }
 @media only screen and (max-width: 330px) {
     .h1a {
-        font-size: 30px;
-        font-weight: bolder;
+        font-size: 25px;
+        font-weight: 300;
         color: #0A5F8E;
     }
  }

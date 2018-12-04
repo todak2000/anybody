@@ -71,7 +71,9 @@
 
                 if ( empty($fullname) OR empty($email)  OR empty($password) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                   //  echo "<div align='center' class='forma' ><h3 style='color:#ccc;'> <img class='img' src='img/fail.png'><br>Failed registration due to INCOMPLETE details<br> Please Enter every details again!.</h3><br/> <span style='color:#979b1b; font-size:20px;' class='close btn'>X</span></div>";
-                    echo "<div align='center' class='forma' ><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; font-size:100px;'></i><br>Failed registration due to INCOMPLETE details<br> Please Enter every details again!.</h3><br/> <span style='color:#979b1b; font-size:20px;' class='close btn'>X</span></div>";
+                    //echo "<div align='center' class='formaa'><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; font-size:100px;'></i><br>Failed registration due to INCOMPLETE details<br> Please Enter every details again!.</h3><br/> <span style='color:#979b1b; font-size:20px;' class='close btn'>X</span></div>";
+                    echo "<div align='center' class='formaa'><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span><br><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; margin-left:15%; font-size:100px;'></i><br>Failed registration due to INCOMPLETE details</h3><br/><a href='signup' class='btn botaa pull-right' style='background-color: #eae2e2cc;'>Sign up</a></div>";
+
 
                 }
             
@@ -84,7 +86,9 @@
                     if($rows>=1){
                         // echo" Error (400). Username or email already exists";
                        // echo "<div align='center' class='formaa'><h3 style='color:#ccc;'> <img class='img' src='img/fail.png'><br>Failed Registration because User Exist.</h3><br/><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span></div>";
-                       echo "<div align='center' class='formaa'><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; font-size:100px;'></i><br>Failed Registration because User Exist.</h3><br/><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span></div>";
+                       //echo "<div align='center' class='formaa'><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; font-size:100px;'></i><br>Failed Registration because User Exist.</h3><br/><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span></div>";
+                       echo "<div align='center' class='formaa'><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span><br><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; margin-left:15%; font-size:100px;'></i><br>Failed Registration because User Exist.</h3><br/><a href='signup' class='btn botaa pull-right' style='background-color: #eae2e2cc;'>Sign up</a></div>";
+
 
 
                     } else{
@@ -93,7 +97,8 @@
                         // var_dump($result);
                         if($result){
                              //echo "<div align='center' class='form1' ><h3 style='color:#ccc;'> <img class='img1' src='img/ok.png'><br>You are registered successfully.</h3><br/><a style='color:#979b1b;' class='btn btn-default pull-left' href='signin'>Login</a><span style='color:#979b1b; font-size:20px;' class='closea1 btn  pull-right'>X</span></div>";
-                             echo "<div align='center' class='form1' ><h3 style='color:#fff;'><i class='fa fa-check' style='color:green; font-size:100px;'></i><br>You are registered successfully.</h3><br/><a style='color:#979b1b;' class='btn btn-default pull-left' href='signin'>Login</a><span style='color:#979b1b; font-size:20px;' class='closea1 btn  pull-right'>X</span></div>";
+                             //echo "<div align='center' class='form1' ><h3 style='color:#fff;'><i class='fa fa-check' style='color:green; font-size:100px;'></i><br>You are registered successfully.</h3><br/><a style='color:#979b1b;' class='btn btn-default pull-left' href='signin'>Login</a><span style='color:#979b1b; font-size:20px;' class='closea1 btn  pull-right'>X</span></div>";
+                             echo "<div align='center' class='form1' ><span style='color:#979b1b; font-size:20px;' class='closea1 btn  pull-right'>X</span><br><h3 style='color:#fff;'><i class='fa fa-check' style='color:green;margin-left:15%; font-size:100px;'></i><br>You are registered successfully.</h3><br/><a href='signin' class='btn botaa pull-right' style='background-color: #eae2e2cc;'>Sign in</a></div>";
 
                              
                             // echo json_encode($mesg);

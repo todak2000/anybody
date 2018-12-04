@@ -18,33 +18,7 @@
 
 <body style="overflow-y: hidden;">
 <?php
-			require('auth/anybodyapp.php');
-			session_start();
-		    // If form submitted, insert values into the database.
-		    if (isset($_REQUEST['login'])){
-				
-				$email = stripslashes($_REQUEST['email']); // removes backslashes
-				$email = mysqli_real_escape_string($con,$email); //escapes special characters in a string
-				$password = stripslashes($_REQUEST['psw']);
-				$password = mysqli_real_escape_string($con, $password);
-				
-			//Checking is user existing in the database or not
-                //$query = "SELECT * FROM `users` WHERE email='$email' AND password='".md5($password)."'";
-                
-                $query = "SELECT * FROM `users` WHERE email='$email' ";
-
-				$result = mysqli_query($con,$query) or die(mysqli_error());
-				$rows = mysqli_num_rows($result);
-				// var_dump($rows);
-		        if($rows==1){
-                    $_SESSION['email'] = $email;
-                   // var_dump($rows);
-					 //echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Login SUccessfully.</h3><br/>Click here to <a style='color:#979b1b;' href='index'>Home</a></div>";
-					 header("Location: home");// Redirect user to index.php
-		            }else{
-						echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Username/password is incorrect.</h3><br/>Click here to <a style='color:#979b1b;' href='signin'>Login</a></div>";
-						}
-		    }else{
+			
 		?>
 	<div class="contain">
 		<div class="lefta col-md-6 col-sm-12 col-xs-12" style="margin:auto;">
@@ -58,7 +32,9 @@
 
         </div>
         <div class="righta col-md-6 col-sm-12 col-xs-12">
+           
             <div class="signina">
+            <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
                     <p class="h1a" style="margin-bottom: 20px;">Hi, Sign in</p>
                     <div style="width: 100px; height:70px; margin:auto"><div class="span" style="float: left;"><i class="fa fa-facebook"></i></div><div class="span" style="float: right;"><i class="fa fa-google"></i></div></div>
                     <div style="width:270px; margin: auto; margin-bottom:20px;"align="center"> <p class="pa" >Or use your email for registration</p></div>
@@ -75,15 +51,48 @@
                                     <i class="fa fa-lock icon"></i>
                                     <input class="input-field" type="password" placeholder="Password" name="psw">
                                   </div>
-                                 <a href="forgot_password.php"> <p class="p" style=" text-decoration: underline; color:#676767;">Forgot your password?</p></a>
+                                 
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
                     </form>
-                    <p class="hidd pull-left">if you are yet to register! </p><a href="signup" class="btn botaa pull-right hidd" style="left:70%;">Sign up</a> 
+                    <a href="forgot_password.php" class="hidd pull-left" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
+                    <a href="signup" class=" pull-right hidd" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
             </div>                
         </div>
     </div>
-    <?php } ?>
+    <?php 
+require('auth/anybodyapp.php');
+session_start();
+// If form submitted, insert values into the database.
+if (isset($_REQUEST['login'])){
+    
+    $email = stripslashes($_REQUEST['email']); // removes backslashes
+    $email = mysqli_real_escape_string($con,$email); //escapes special characters in a string
+    $password = stripslashes($_REQUEST['psw']);
+    $password = mysqli_real_escape_string($con, $password);
+    
+//Checking is user existing in the database or not
+    //$query = "SELECT * FROM `users` WHERE email='$email' AND password='".md5($password)."'";
+    
+    $query = "SELECT * FROM `users` WHERE email='$email' ";
+
+    $result = mysqli_query($con,$query) or die(mysqli_error());
+    $rows = mysqli_num_rows($result);
+    // var_dump($rows);
+    if($rows==1){
+        $_SESSION['email'] = $email;
+       // var_dump($rows);
+         //echo "<div align='center' class='form' style='margin-top: 0;color:#ccc; width: 400px;position:fixed; top: 30%; left: 35%;'><h3 style='color:#ccc;'> <span style='font-size:80px; color:#FFC655'>&#9785;</span><br>Login SUccessfully.</h3><br/>Click here to <a style='color:#979b1b;' href='index'>Home</a></div>";
+         header("Location: home");// Redirect user to index.php
+        }else{
+            //echo "<div align='center' class='forma'><h3 style='color:#ccc;'><i class='fa fa-times' class='img' style='color:red; font-size:100px;'></i><br>Username/password is incorrect.</h3><br/>Click here to <a style='color:#979b1b;' href='signin'>Login</a></div>";
+            echo "<div align='center' class='formaa'><span style='color:#979b1b; font-size:20px;' class='closea btn  pull-right'>X</span><br><h3 style='color:#fff;'> <i class='fa fa-times' class='img' style='color:red; margin-left:15%; font-size:100px;'></i><br>Username/password is incorrect.</h3><br/><a href='signup' class='btn botaa pull-right' style='background-color: #eae2e2cc;'>Sign up</a></div>";
+
+            }
+}else{
+} ?>
    
 </body>
-
+<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/submit_login.js"></script>
 </html>
