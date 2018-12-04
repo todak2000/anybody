@@ -31,7 +31,7 @@
             </div>
 
         </div>
-        <div class="righta col-md-6 col-sm-12 col-xs-12">
+        <div class=" col-md-6 col-sm-12 col-xs-12 flex-container">
            
             <div class="signina">
             <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
