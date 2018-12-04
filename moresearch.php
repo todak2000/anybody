@@ -132,7 +132,7 @@ if($rows2>0){
 		<div class="bottom">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div>
-					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
+					<p class="text-center hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
 					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
 					<ul class=" about hidden-xs hidden-sm">
 						<!-- <li>About</li>

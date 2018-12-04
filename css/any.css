@@ -123,6 +123,10 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     padding-right:10px;
     background-color:#00B4CD;
 }
+a:hover{
+    color:inherit;
+    background-color: inherit;
+}
 /* 
 input[type='submit']{
         color: #024978;

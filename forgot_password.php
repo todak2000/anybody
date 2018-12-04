@@ -23,8 +23,8 @@
 	<div class="contain">
         <div class="righta col-md-12 col-sm-12 col-xs-12">
             <div class="forgot">
-            <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
-                    <p class="h1a" style="margin-bottom: 20px;">Forgot Password?</p>
+            <img src="anybody_logo_blue.svg" align="center" width="150">
+                    <p class="h1a" style="margin-bottom: 20px; font-size:22px;">Forgot Password?</p>
                    
 
                     <form class="form_login" style=" margin:auto;" method="post" action="">
@@ -40,8 +40,8 @@
                                 <button class="btn bota" name="reset" style="margin-top:20px;">Reset</button>
                     </form>
                     <!-- <a href="signin" class="btn botaa pull-left hidd" >Sign in</a> <a href="signup" class="btn botaa pull-right hidd" style="left:70%;">Sign up</a>  -->
-                    <a href="signup" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Sign Up</a>
-                    <a href="signin" id="rightie" class=" pull-right hidd">Sign in</a> 
+                    <a href="signup" class="hidd pull-left hidden-md hidden-lg" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Sign Up</a>
+                    <a href="signin" id="rightie" class=" pull-right hidd hidden-md hidden-lg">Sign in</a> 
             </div>                
         </div>
     </div>

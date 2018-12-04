@@ -53,6 +53,16 @@ time, mark, audio, video, .row, .col-md-4, .col-md-3, .col-md-1, .col-md-6, .col
     font-size: 16px;
     color:#676767;
 }
+.bot:hover{
+    color:#fff;
+    background-color: transparent;
+    border:1px solid #fff;
+}
+.bota:hover{
+    color:#fff;
+    background-color: #0A5F8E;
+    border:1px solid #fff;
+}
 .bot{
     width:40%;
     height:50px;
@@ -144,13 +154,10 @@ a{
     color: #fff;
 }
 a:hover{
-	color:#fff!important;
+	color: #676767!important;
 	opacity:0.8!important;
 }
-button:hover{
-	color:#fff!important;
-	opacity:0.8!important;
-}
+
 .span{
     height:40px;
     width:40px;

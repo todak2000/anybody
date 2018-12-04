@@ -51,11 +51,12 @@
                                     <i class="fa fa-lock icon"></i>
                                     <input class="input-field" type="password" placeholder="Password" name="psw">
                                   </div>
-                                 
+                                  <a href="forgot_password" class="hidden-xs hidden-sm" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a><br>
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
+                                
                     </form>
-                    <a href="forgot_password" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
-                    <a href="signup" id="rightie" class=" pull-right hidd" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
+                    <a href="forgot_password" class="hidd pull-left hidden-lg hidden-md" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
+                    <a href="signup" id="rightie" class=" pull-right hidd hidden-lg hidden-md" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
             </div>                
         </div>
     </div>

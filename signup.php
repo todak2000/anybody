@@ -50,15 +50,11 @@
                                     <i class="fa fa-lock icon"></i>
                                     <input id="pass" class="input-field" type="password" placeholder="Password" name="psw">
                                   </div>
-                                  <!-- <div class="input-container">
-                                        <i class="fa fa-phone icon"></i>
-                                        <input class="input-field" type="text" placeholder="Phone Number" name="phone">
-                                      </div> -->
+                                  <!-- <a href="forgot_password" class="hidden-sm hidden-xs"style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot Password?</a><br> -->
                                       <button class="btn bota" type="submit">SIGN UP</button><br><br>
-                                    <!-- <p class="hidd pull-left"> Registered already ?</p><a href="signin" class="btn botaa pull-right hidd" style=" left:70%;">Sign in</a> -->
-
-                                    <a href="forgot_password" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot Password?</a>
-                    <a href="signin" id="rightie" class=" pull-right hidd" style="left:55%;color:#676767;text-decoration: underline; ">Already a Member?</a> 
+                                   
+                    <a href="forgot_password" class="hidd pull-left hidden-lg hidden-md" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot Password?</a>
+                    <a href="signin" id="rightie" class=" pull-right hidd hidden-lg hidden-md" style="left:55%;color:#676767;text-decoration: underline; ">Already a Member?</a> 
                     </form>
                     <?php
 			require('auth/anybodyapp.php');

@@ -87,7 +87,7 @@ $rows2 = mysqli_num_rows($result2);
 if($rows2>0){
 
     echo"<div class='middle' style='height:70%;'>
-            <div class='flex-container' style='justify-content: center;  margin-top:0;'>
+            <div class='flex-container' style='justify-content: center;  margin-top:0; margin-left:0;'>
                    
             ";
     while ($row2 = mysqli_fetch_assoc($result2))
