@@ -20,7 +20,7 @@
 <?php
 			
 		?>
-	<div class="contain">
+	<div class="contain" style="overflow-y:hidden;">
 		<div class="lefta col-md-6 col-sm-12 col-xs-12" style="margin:auto;">
             <!-- <img src="img/logo.svg" width="900px" height="900px" class="back"> -->
             <div class="signa">

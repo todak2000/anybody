@@ -18,7 +18,7 @@
 
 <body  class="boddy">
 
-	<div class="contain">
+	<div class="contain" style="overflow-y: hidden;">
 		<div class="left col-md-6 col-sm-12 col-xs-12" style="margin:auto;">
             <div class="sign">
                 <a href="index"><img src="img/anywhite.svg"></a>
