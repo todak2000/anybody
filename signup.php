@@ -32,7 +32,7 @@
             <div class="signin">
             <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
                     <p class="h1a">Hi!</p><p class="h1a" style="margin-bottom:20px;">Create Account</p>
-                    <div style="width: 100px; height:70px; margin:auto"><div class="span" style="float: left;"><i class="fa fa-facebook"></i></div><div class="span" style="float: right;"><i class="fa fa-google"></i></div></div>
+                    <div  class="facie"><div class="span" style="float: left;"><i class="fa fa-facebook"></i></div><div class="span" style="float: right;"><i class="fa fa-google"></i></div></div>
                     <div style="width:270px; margin: auto; margin-bottom:20px;"align="center"> <p class="pa" >Or use your email for registration</p></div>
 
                     <form id="form" class="form_login" style="margin:auto;" method="post" action="">
@@ -55,7 +55,10 @@
                                         <input class="input-field" type="text" placeholder="Phone Number" name="phone">
                                       </div> -->
                                       <button class="btn bota" type="submit">SIGN UP</button><br><br>
-                                    <p class="hidd pull-left"> Registered already ?</p><a href="signin" class="btn botaa pull-right hidd" style=" left:70%;">Sign in</a>
+                                    <!-- <p class="hidd pull-left"> Registered already ?</p><a href="signin" class="btn botaa pull-right hidd" style=" left:70%;">Sign in</a> -->
+
+                                    <a href="forgot_password" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot Password?</a>
+                    <a href="signin" id="rightie" class=" pull-right hidd" style="left:55%;color:#676767;text-decoration: underline; ">Already a Member?</a> 
                     </form>
                     <?php
 			require('auth/anybodyapp.php');

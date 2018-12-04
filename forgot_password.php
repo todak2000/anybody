@@ -23,25 +23,25 @@
 	<div class="contain">
         <div class="righta col-md-12 col-sm-12 col-xs-12">
             <div class="forgot">
+            <img src="anybody_logo_blue.svg" align="center" width="150" class="hidden-md hidden-lg">
                     <p class="h1a" style="margin-bottom: 20px;">Forgot Password?</p>
                    
 
                     <form class="form_login" style=" margin:auto;" method="post" action="">
-                           
-                                    <label class="pull-left">Enter your Email:</label>
                                   <div class="input-container">
                                     <i class="fa fa-envelope-o icon"></i>
-                                    <input class="input-field" type="text" placeholder="Email" name="email">
+                                    <input class="input-field" type="text" placeholder="Enter your Email" name="email">
                                   </div>
-                                  <label class="pull-left">New Password:</label>
                                   <div class="input-container">
                                     <i class="fa fa-lock icon"></i>
-                                    <input class="input-field" type="password" placeholder="Password" name="psw">
+                                    <input class="input-field" type="password" placeholder="Enter New Password" name="psw">
                                   </div>
                                 
                                 <button class="btn bota" name="reset" style="margin-top:20px;">Reset</button>
                     </form>
-                    <a href="signin" class="btn botaa pull-left hidd" >Sign in</a> <a href="signup" class="btn botaa pull-right hidd" style="left:70%;">Sign up</a> 
+                    <!-- <a href="signin" class="btn botaa pull-left hidd" >Sign in</a> <a href="signup" class="btn botaa pull-right hidd" style="left:70%;">Sign up</a>  -->
+                    <a href="signup" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Sign Up</a>
+                    <a href="signin" id="rightie" class=" pull-right hidd">Sign in</a> 
             </div>                
         </div>
     </div>

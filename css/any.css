@@ -349,7 +349,7 @@ a:hover{
         position: fixed;
         bottom:0;
         background-color:aliceblue;
-        /* margin-left:-15px; */
+        margin-left:-15px;
         font-family: Open Sans;
         font-size: 14px;
         line-height: 22px;
@@ -519,5 +519,9 @@ a:hover{
         height: auto;
         color:#000;
         font-size:16px;
+    }
+    .bottom{
+        margin-left:0px;
+
     }
 }

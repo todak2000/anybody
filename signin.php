@@ -54,7 +54,7 @@
                                  
                                 <button class="btn bota" name="login" style="margin-top:20px;">SIGN IN</button>
                     </form>
-                    <a href="forgot_password.php" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
+                    <a href="forgot_password" class="hidd pull-left" id="leftie" style=" text-decoration: underline; color:#676767; margin-left:5px;">Forgot your password?</a>
                     <a href="signup" id="rightie" class=" pull-right hidd" style="left:70%;color:#676767;text-decoration: underline; ">Sign up</a> 
             </div>                
         </div>

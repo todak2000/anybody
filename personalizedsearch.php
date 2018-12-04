@@ -528,10 +528,10 @@ if(!empty($result)) {
 }  
 }
    ?>
-		<div class="bottom" style="height:5%; position:fixed; bottom:0;">
+		<div class="bottom" style="height:5%; position:fixed; bottom:0; margin-left:0;">
 				<!-- <div class="button pull-right"><button class="signIn btn">Login</button><button class="signUp btn">Sign Up</button></div> -->
 				<div style="width:96vw; ">
-					<p class="pull-left hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
+					<p class=" text-center hidden-xs hidden-sm">Anybody | iVO Thinking &copy;2018</p>
 					<p class=" hidden-md hidden-lg" style="text-align:center;">Anybody | iVO Thinking &copy;2018</p>
 					<!-- <ul class=" about hidden-xs hidden-sm pull-right">
 						<li>About</li>

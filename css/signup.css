@@ -170,6 +170,11 @@ button:hover{
     background-repeat: no-repeat;
     
 }
+.facie{
+    width: 100px;
+    height: 70px;
+    margin: auto;
+    }
 .lefta{
     /* width: 50%; */
     height: 100%;
@@ -296,6 +301,11 @@ label:focus,
     outline:0px !important;
     -webkit-appearance:none!important;
 }
+#rightie{
+    left: 70%;
+    color: #676767;
+    text-decoration: underline;
+}
 @media screen and (min-width: 2000px) {
     .boddy {
       overflow-y: auto;
@@ -359,9 +369,12 @@ label:focus,
    .hidd{
     display:block;
 }
+.forgot {
+    margin-top: 50%;
+}
 .h1a {
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 22px;
+    /* font-weight: bolder; */
     color: #0A5F8E;
 }
    .form_login {
@@ -381,8 +394,22 @@ label:focus,
 }
 @media only screen and (max-width: 330px) {
     .h1a {
-        font-size: 25px;
-        font-weight: 300;
+        font-size: 22px;
+        font-weight: 100;
         color: #0A5F8E;
     }
- }
+    .facie{
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    }
+    
+    /* #rightie{
+        left: 35%;
+        color: #676767;
+        text-decoration: underline;
+    } */
+
+
+}
+ 
