@@ -16,7 +16,7 @@
     
 </head>
 
-<body style="overflow-y: hidden;">
+<body style="">
 <?php
 			
 		?>
